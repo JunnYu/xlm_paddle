@@ -1,0 +1,40 @@
+{
+    "do_lowercase_and_remove_accent": true,
+    "id2lang": {
+        "0": "ar",
+        "1": "bg",
+        "2": "de",
+        "3": "el",
+        "4": "en",
+        "5": "es",
+        "6": "fr",
+        "7": "hi",
+        "8": "ru",
+        "9": "sw",
+        "10": "th",
+        "11": "tr",
+        "12": "ur",
+        "13": "vi",
+        "14": "zh"
+    },
+    "lang2id": {
+        "ar": 0,
+        "bg": 1,
+        "de": 2,
+        "el": 3,
+        "en": 4,
+        "es": 5,
+        "fr": 6,
+        "hi": 7,
+        "ru": 8,
+        "sw": 9,
+        "th": 10,
+        "tr": 11,
+        "ur": 12,
+        "vi": 13,
+        "zh": 14
+    },
+    "vocab_file": "C:\\Users\\yujun\\.paddlenlp\\models\\xlm-mlm-tlm-xnli15-1024\\vocab.json",
+    "merges_file": "C:\\Users\\yujun\\.paddlenlp\\models\\xlm-mlm-tlm-xnli15-1024\\merges.txt",
+    "init_class": "XLMTokenizer"
+}

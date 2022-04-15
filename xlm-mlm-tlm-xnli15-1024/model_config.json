@@ -1,0 +1,48 @@
+{
+    "init_args": [
+        {
+            "is_encoder": true,
+            "causal": false,
+            "n_langs": 15,
+            "use_lang_embeddings": true,
+            "vocab_size": 95000,
+            "eos_token_id": 1,
+            "pad_token_id": 2,
+            "hidden_size": 1024,
+            "num_attention_heads": 8,
+            "num_hidden_layers": 12,
+            "hidden_dropout_prob": 0.1,
+            "attention_probs_dropout_prob": 0.1,
+            "max_position_embeddings": 512,
+            "use_sinusoidal_embeddings": false,
+            "layer_norm_eps": 1e-12,
+            "hidden_act": "gelu",
+            "embed_init_std": 0.02209708691207961,
+            "init_std": 0.02,
+            "use_asm": false,
+            "asm_cutoffs": 1,
+            "asm_div_value": 1,
+            "mask_token_id":0,
+            "lang_id": 4,
+            "lang2id": {
+                "ar": 0,
+                "bg": 1,
+                "de": 2,
+                "el": 3,
+                "en": 4,
+                "es": 5,
+                "fr": 6,
+                "hi": 7,
+                "ru": 8,
+                "sw": 9,
+                "th": 10,
+                "tr": 11,
+                "ur": 12,
+                "vi": 13,
+                "zh": 14
+              },
+            "init_class": "XLMModel"
+        }
+    ],
+    "init_class": "XLMWithLMHeadModel"
+}

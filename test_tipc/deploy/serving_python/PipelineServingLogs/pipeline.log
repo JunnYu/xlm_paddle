@@ -1,0 +1,315 @@
+WARNING 2022-04-15 21:43:33,575 [pipeline_server.py:508] [CONF] build_dag_each_worker not set, use default: False
+WARNING 2022-04-15 21:43:33,575 [pipeline_server.py:508] [CONF] retry not set, use default: 1
+WARNING 2022-04-15 21:43:33,576 [pipeline_server.py:508] [CONF] client_type not set, use default: brpc
+WARNING 2022-04-15 21:43:33,576 [pipeline_server.py:508] [CONF] use_profile not set, use default: False
+WARNING 2022-04-15 21:43:33,576 [pipeline_server.py:508] [CONF] channel_size not set, use default: 0
+WARNING 2022-04-15 21:43:33,577 [pipeline_server.py:508] [CONF] tracer not set, use default: {}
+WARNING 2022-04-15 21:43:33,577 [pipeline_server.py:508] [CONF] channel_recv_frist_arrive not set, use default: False
+WARNING 2022-04-15 21:43:33,578 [pipeline_server.py:508] [CONF] interval_s not set, use default: -1
+WARNING 2022-04-15 21:43:33,578 [pipeline_server.py:508] [CONF] timeout not set, use default: -1
+WARNING 2022-04-15 21:43:33,578 [pipeline_server.py:508] [CONF] retry not set, use default: 1
+WARNING 2022-04-15 21:43:33,579 [pipeline_server.py:508] [CONF] batch_size not set, use default: 1
+WARNING 2022-04-15 21:43:33,579 [pipeline_server.py:508] [CONF] auto_batching_timeout not set, use default: -1
+WARNING 2022-04-15 21:43:33,580 [pipeline_server.py:508] [CONF] workdir not set, use default: 
+WARNING 2022-04-15 21:43:33,580 [pipeline_server.py:508] [CONF] thread_num not set, use default: 2
+WARNING 2022-04-15 21:43:33,580 [pipeline_server.py:508] [CONF] devices not set, use default: 
+WARNING 2022-04-15 21:43:33,580 [pipeline_server.py:508] [CONF] mem_optim not set, use default: True
+WARNING 2022-04-15 21:43:33,581 [pipeline_server.py:508] [CONF] ir_optim not set, use default: False
+WARNING 2022-04-15 21:43:33,581 [pipeline_server.py:508] [CONF] precision not set, use default: fp32
+WARNING 2022-04-15 21:43:33,581 [pipeline_server.py:508] [CONF] use_calib not set, use default: False
+WARNING 2022-04-15 21:43:33,582 [pipeline_server.py:508] [CONF] use_mkldnn not set, use default: False
+WARNING 2022-04-15 21:43:33,582 [pipeline_server.py:508] [CONF] mkldnn_cache_capacity not set, use default: 0
+INFO 2022-04-15 21:43:33,587 [operator.py:180] local_service_conf: {'model_config': './xlm_server', 'device_type': 0, 'client_type': 'local_predictor', 'workdir': '', 'thread_num': 2, 'devices': '', 'mem_optim': True, 'ir_optim': False, 'precision': 'fp32', 'use_calib': False, 'use_mkldnn': False, 'mkldnn_cache_capacity': 0}
+INFO 2022-04-15 21:43:33,587 [local_service_handler.py:160] Models(./xlm_server) will be launched by device cpu. use_gpu:False, use_trt:False, use_lite:False, use_xpu:False, device_type:0, devices:[-1], mem_optim:True, ir_optim:False, use_profile:False, thread_num:2, client_type:local_predictor, fetch_names:None, precision:fp32, use_mkldnn:False, mkldnn_cache_capacity:0, mkldnn_op_list:None, mkldnn_bf16_op_list:None
+INFO 2022-04-15 21:43:33,588 [operator.py:271] xlm 
+	input_ops: @DAGExecutor,
+	server_endpoints: None
+	fetch_list: None
+	client_config: ./xlm_server/serving_server_conf.prototxt
+	concurrency: 1,
+	timeout(s): -1,
+	retry: 1,
+	batch_size: 1,
+	auto_batching_timeout(s): None
+INFO 2022-04-15 21:43:33,588 [pipeline_server.py:215] ============= PIPELINE SERVER =============
+INFO 2022-04-15 21:43:33,588 [pipeline_server.py:216] 
+{
+    "worker_num":1,
+    "http_port":18080,
+    "rpc_port":9993,
+    "dag":{
+        "is_thread_op":false,
+        "retry":1,
+        "client_type":"brpc",
+        "use_profile":false,
+        "channel_size":0,
+        "tracer":{
+            "interval_s":-1
+        },
+        "channel_recv_frist_arrive":false
+    },
+    "op":{
+        "xlm":{
+            "concurrency":1,
+            "local_service_conf":{
+                "model_config":"./xlm_server",
+                "device_type":0,
+                "client_type":"local_predictor",
+                "workdir":"",
+                "thread_num":2,
+                "devices":"",
+                "mem_optim":true,
+                "ir_optim":false,
+                "precision":"fp32",
+                "use_calib":false,
+                "use_mkldnn":false,
+                "mkldnn_cache_capacity":0
+            },
+            "timeout":-1,
+            "retry":1,
+            "batch_size":1,
+            "auto_batching_timeout":-1
+        }
+    },
+    "build_dag_each_worker":false
+}
+INFO 2022-04-15 21:43:33,588 [pipeline_server.py:223] -------------------------------------------
+INFO 2022-04-15 21:43:33,588 [operator.py:307] Op(xlm) use local rpc service at port: []
+INFO 2022-04-15 21:43:33,596 [dag.py:496] [DAG] Succ init
+INFO 2022-04-15 21:43:33,597 [dag.py:659] ================= USED OP =================
+INFO 2022-04-15 21:43:33,597 [dag.py:662] xlm
+INFO 2022-04-15 21:43:33,597 [dag.py:663] -------------------------------------------
+INFO 2022-04-15 21:43:33,597 [dag.py:680] ================== DAG ====================
+INFO 2022-04-15 21:43:33,598 [dag.py:682] (VIEW 0)
+INFO 2022-04-15 21:43:33,598 [dag.py:684]   [@DAGExecutor]
+INFO 2022-04-15 21:43:33,598 [dag.py:686]     - xlm
+INFO 2022-04-15 21:43:33,598 [dag.py:682] (VIEW 1)
+INFO 2022-04-15 21:43:33,598 [dag.py:684]   [xlm]
+INFO 2022-04-15 21:43:33,598 [dag.py:687] -------------------------------------------
+INFO 2022-04-15 21:43:33,614 [dag.py:730] op:xlm add input channel.
+INFO 2022-04-15 21:43:33,628 [dag.py:759] last op:xlm add output channel
+INFO 2022-04-15 21:43:33,629 [dag.py:800] [DAG] Succ build DAG
+INFO 2022-04-15 21:43:33,633 [dag.py:832] [DAG] start
+INFO 2022-04-15 21:43:33,634 [dag.py:182] [DAG] set in channel succ, name [@DAGExecutor]
+INFO 2022-04-15 21:43:33,636 [pipeline_server.py:51] [PipelineServicer] succ init
+INFO 2022-04-15 21:43:33,644 [local_service_handler.py:160] Models(./xlm_server) will be launched by device cpu. use_gpu:False, use_trt:False, use_lite:False, use_xpu:False, device_type:0, devices:[-1], mem_optim:True, ir_optim:False, use_profile:False, thread_num:2, client_type:local_predictor, fetch_names:None, precision:fp32, use_mkldnn:False, mkldnn_cache_capacity:0, mkldnn_op_list:None, mkldnn_bf16_op_list:None
+INFO 2022-04-15 21:43:33,644 [operator.py:1305] Init cuda env in process 0
+INFO 2022-04-15 21:43:33,644 [local_service_handler.py:207] GET_CLIENT : concurrency_idx=0, device_num=1
+INFO 2022-04-15 21:43:33,652 [local_predict.py:136] pdmodel_file_list:['./xlm_server/inference.pdmodel'], pdiparams_file_list:['./xlm_server/inference.pdiparams']
+INFO 2022-04-15 21:43:33,652 [local_predict.py:144] LocalPredictor load_model_config params: model_path:./xlm_server, use_gpu:False, gpu_id:-1, use_profile:False, thread_num:2, mem_optim:True, ir_optim:False, use_trt:False, use_lite:False, use_xpu:False, precision:fp32, use_calib:False, use_mkldnn:False, mkldnn_cache_capacity:0, mkldnn_op_list:None, mkldnn_bf16_op_list:None, use_feed_fetch_ops:False, 
+INFO 2022-04-15 21:43:34,807 [operator.py:367] Op({}) has no fetch name set. So fetch all vars
+INFO 2022-04-15 21:43:34,916 [operator.py:1317] [xlm|0] Succ init
+INFO 2022-04-15 21:43:41,431 [pipeline_server.py:54] (log_id=10000) inference request name:xlm self.name:xlm time:1650030221.4311893
+INFO 2022-04-15 21:43:41,431 [operator.py:1720] RequestOp unpack one request. log_id:10000, clientip:             name:xlm, method:prediction, time:1650030221.431829
+INFO 2022-04-15 21:43:41,432 [dag.py:368] (data_id=0 log_id=10000) Succ Generate ID 
+INFO 2022-04-15 21:43:41,673 [dag.py:404] (data_id=0 log_id=10000) Succ predict
+WARNING 2022-04-15 21:46:37,056 [pipeline_server.py:508] [CONF] build_dag_each_worker not set, use default: False
+WARNING 2022-04-15 21:46:37,056 [pipeline_server.py:508] [CONF] retry not set, use default: 1
+WARNING 2022-04-15 21:46:37,057 [pipeline_server.py:508] [CONF] client_type not set, use default: brpc
+WARNING 2022-04-15 21:46:37,057 [pipeline_server.py:508] [CONF] use_profile not set, use default: False
+WARNING 2022-04-15 21:46:37,057 [pipeline_server.py:508] [CONF] channel_size not set, use default: 0
+WARNING 2022-04-15 21:46:37,058 [pipeline_server.py:508] [CONF] tracer not set, use default: {}
+WARNING 2022-04-15 21:46:37,058 [pipeline_server.py:508] [CONF] channel_recv_frist_arrive not set, use default: False
+WARNING 2022-04-15 21:46:37,058 [pipeline_server.py:508] [CONF] interval_s not set, use default: -1
+WARNING 2022-04-15 21:46:37,059 [pipeline_server.py:508] [CONF] timeout not set, use default: -1
+WARNING 2022-04-15 21:46:37,059 [pipeline_server.py:508] [CONF] retry not set, use default: 1
+WARNING 2022-04-15 21:46:37,060 [pipeline_server.py:508] [CONF] batch_size not set, use default: 1
+WARNING 2022-04-15 21:46:37,060 [pipeline_server.py:508] [CONF] auto_batching_timeout not set, use default: -1
+WARNING 2022-04-15 21:46:37,060 [pipeline_server.py:508] [CONF] workdir not set, use default: 
+WARNING 2022-04-15 21:46:37,061 [pipeline_server.py:508] [CONF] thread_num not set, use default: 2
+WARNING 2022-04-15 21:46:37,061 [pipeline_server.py:508] [CONF] devices not set, use default: 
+WARNING 2022-04-15 21:46:37,061 [pipeline_server.py:508] [CONF] mem_optim not set, use default: True
+WARNING 2022-04-15 21:46:37,062 [pipeline_server.py:508] [CONF] ir_optim not set, use default: False
+WARNING 2022-04-15 21:46:37,062 [pipeline_server.py:508] [CONF] precision not set, use default: fp32
+WARNING 2022-04-15 21:46:37,062 [pipeline_server.py:508] [CONF] use_calib not set, use default: False
+WARNING 2022-04-15 21:46:37,063 [pipeline_server.py:508] [CONF] use_mkldnn not set, use default: False
+WARNING 2022-04-15 21:46:37,063 [pipeline_server.py:508] [CONF] mkldnn_cache_capacity not set, use default: 0
+INFO 2022-04-15 21:46:37,068 [operator.py:180] local_service_conf: {'model_config': './xlm_server', 'device_type': 0, 'client_type': 'local_predictor', 'workdir': '', 'thread_num': 2, 'devices': '', 'mem_optim': True, 'ir_optim': False, 'precision': 'fp32', 'use_calib': False, 'use_mkldnn': False, 'mkldnn_cache_capacity': 0}
+INFO 2022-04-15 21:46:37,068 [local_service_handler.py:160] Models(./xlm_server) will be launched by device cpu. use_gpu:False, use_trt:False, use_lite:False, use_xpu:False, device_type:0, devices:[-1], mem_optim:True, ir_optim:False, use_profile:False, thread_num:2, client_type:local_predictor, fetch_names:None, precision:fp32, use_mkldnn:False, mkldnn_cache_capacity:0, mkldnn_op_list:None, mkldnn_bf16_op_list:None
+INFO 2022-04-15 21:46:37,068 [operator.py:271] xlm 
+	input_ops: @DAGExecutor,
+	server_endpoints: None
+	fetch_list: None
+	client_config: ./xlm_server/serving_server_conf.prototxt
+	concurrency: 1,
+	timeout(s): -1,
+	retry: 1,
+	batch_size: 1,
+	auto_batching_timeout(s): None
+INFO 2022-04-15 21:46:37,068 [pipeline_server.py:215] ============= PIPELINE SERVER =============
+INFO 2022-04-15 21:46:37,069 [pipeline_server.py:216] 
+{
+    "worker_num":1,
+    "http_port":18080,
+    "rpc_port":9993,
+    "dag":{
+        "is_thread_op":false,
+        "retry":1,
+        "client_type":"brpc",
+        "use_profile":false,
+        "channel_size":0,
+        "tracer":{
+            "interval_s":-1
+        },
+        "channel_recv_frist_arrive":false
+    },
+    "op":{
+        "xlm":{
+            "concurrency":1,
+            "local_service_conf":{
+                "model_config":"./xlm_server",
+                "device_type":0,
+                "client_type":"local_predictor",
+                "workdir":"",
+                "thread_num":2,
+                "devices":"",
+                "mem_optim":true,
+                "ir_optim":false,
+                "precision":"fp32",
+                "use_calib":false,
+                "use_mkldnn":false,
+                "mkldnn_cache_capacity":0
+            },
+            "timeout":-1,
+            "retry":1,
+            "batch_size":1,
+            "auto_batching_timeout":-1
+        }
+    },
+    "build_dag_each_worker":false
+}
+INFO 2022-04-15 21:46:37,069 [pipeline_server.py:223] -------------------------------------------
+INFO 2022-04-15 21:46:37,069 [operator.py:307] Op(xlm) use local rpc service at port: []
+INFO 2022-04-15 21:46:37,076 [dag.py:496] [DAG] Succ init
+INFO 2022-04-15 21:46:37,077 [dag.py:659] ================= USED OP =================
+INFO 2022-04-15 21:46:37,077 [dag.py:662] xlm
+INFO 2022-04-15 21:46:37,077 [dag.py:663] -------------------------------------------
+INFO 2022-04-15 21:46:37,077 [dag.py:680] ================== DAG ====================
+INFO 2022-04-15 21:46:37,078 [dag.py:682] (VIEW 0)
+INFO 2022-04-15 21:46:37,078 [dag.py:684]   [@DAGExecutor]
+INFO 2022-04-15 21:46:37,078 [dag.py:686]     - xlm
+INFO 2022-04-15 21:46:37,078 [dag.py:682] (VIEW 1)
+INFO 2022-04-15 21:46:37,078 [dag.py:684]   [xlm]
+INFO 2022-04-15 21:46:37,078 [dag.py:687] -------------------------------------------
+INFO 2022-04-15 21:46:37,096 [dag.py:730] op:xlm add input channel.
+INFO 2022-04-15 21:46:37,110 [dag.py:759] last op:xlm add output channel
+INFO 2022-04-15 21:46:37,111 [dag.py:800] [DAG] Succ build DAG
+INFO 2022-04-15 21:46:37,115 [dag.py:832] [DAG] start
+INFO 2022-04-15 21:46:37,115 [dag.py:182] [DAG] set in channel succ, name [@DAGExecutor]
+INFO 2022-04-15 21:46:37,117 [pipeline_server.py:51] [PipelineServicer] succ init
+INFO 2022-04-15 21:46:37,126 [local_service_handler.py:160] Models(./xlm_server) will be launched by device cpu. use_gpu:False, use_trt:False, use_lite:False, use_xpu:False, device_type:0, devices:[-1], mem_optim:True, ir_optim:False, use_profile:False, thread_num:2, client_type:local_predictor, fetch_names:None, precision:fp32, use_mkldnn:False, mkldnn_cache_capacity:0, mkldnn_op_list:None, mkldnn_bf16_op_list:None
+INFO 2022-04-15 21:46:37,126 [operator.py:1305] Init cuda env in process 0
+INFO 2022-04-15 21:46:37,126 [local_service_handler.py:207] GET_CLIENT : concurrency_idx=0, device_num=1
+INFO 2022-04-15 21:46:37,134 [local_predict.py:136] pdmodel_file_list:['./xlm_server/inference.pdmodel'], pdiparams_file_list:['./xlm_server/inference.pdiparams']
+INFO 2022-04-15 21:46:37,134 [local_predict.py:144] LocalPredictor load_model_config params: model_path:./xlm_server, use_gpu:False, gpu_id:-1, use_profile:False, thread_num:2, mem_optim:True, ir_optim:False, use_trt:False, use_lite:False, use_xpu:False, precision:fp32, use_calib:False, use_mkldnn:False, mkldnn_cache_capacity:0, mkldnn_op_list:None, mkldnn_bf16_op_list:None, use_feed_fetch_ops:False, 
+INFO 2022-04-15 21:46:37,190 [pipeline_server.py:54] (log_id=10000) inference request name:xlm self.name:xlm time:1650030397.1906826
+INFO 2022-04-15 21:46:37,191 [operator.py:1720] RequestOp unpack one request. log_id:10000, clientip:             name:xlm, method:prediction, time:1650030397.1913502
+INFO 2022-04-15 21:46:37,191 [dag.py:368] (data_id=0 log_id=10000) Succ Generate ID 
+INFO 2022-04-15 21:46:38,153 [operator.py:367] Op({}) has no fetch name set. So fetch all vars
+INFO 2022-04-15 21:46:38,242 [operator.py:1317] [xlm|0] Succ init
+INFO 2022-04-15 21:46:38,452 [dag.py:404] (data_id=0 log_id=10000) Succ predict
+WARNING 2022-04-15 22:34:15,869 [pipeline_server.py:508] [CONF] build_dag_each_worker not set, use default: False
+WARNING 2022-04-15 22:34:15,870 [pipeline_server.py:508] [CONF] retry not set, use default: 1
+WARNING 2022-04-15 22:34:15,870 [pipeline_server.py:508] [CONF] client_type not set, use default: brpc
+WARNING 2022-04-15 22:34:15,870 [pipeline_server.py:508] [CONF] use_profile not set, use default: False
+WARNING 2022-04-15 22:34:15,870 [pipeline_server.py:508] [CONF] channel_size not set, use default: 0
+WARNING 2022-04-15 22:34:15,871 [pipeline_server.py:508] [CONF] tracer not set, use default: {}
+WARNING 2022-04-15 22:34:15,871 [pipeline_server.py:508] [CONF] channel_recv_frist_arrive not set, use default: False
+WARNING 2022-04-15 22:34:15,871 [pipeline_server.py:508] [CONF] interval_s not set, use default: -1
+WARNING 2022-04-15 22:34:15,872 [pipeline_server.py:508] [CONF] timeout not set, use default: -1
+WARNING 2022-04-15 22:34:15,872 [pipeline_server.py:508] [CONF] retry not set, use default: 1
+WARNING 2022-04-15 22:34:15,872 [pipeline_server.py:508] [CONF] batch_size not set, use default: 1
+WARNING 2022-04-15 22:34:15,872 [pipeline_server.py:508] [CONF] auto_batching_timeout not set, use default: -1
+WARNING 2022-04-15 22:34:15,873 [pipeline_server.py:508] [CONF] workdir not set, use default: 
+WARNING 2022-04-15 22:34:15,873 [pipeline_server.py:508] [CONF] thread_num not set, use default: 2
+WARNING 2022-04-15 22:34:15,873 [pipeline_server.py:508] [CONF] devices not set, use default: 
+WARNING 2022-04-15 22:34:15,874 [pipeline_server.py:508] [CONF] mem_optim not set, use default: True
+WARNING 2022-04-15 22:34:15,874 [pipeline_server.py:508] [CONF] ir_optim not set, use default: False
+WARNING 2022-04-15 22:34:15,874 [pipeline_server.py:508] [CONF] precision not set, use default: fp32
+WARNING 2022-04-15 22:34:15,875 [pipeline_server.py:508] [CONF] use_calib not set, use default: False
+WARNING 2022-04-15 22:34:15,875 [pipeline_server.py:508] [CONF] use_mkldnn not set, use default: False
+WARNING 2022-04-15 22:34:15,875 [pipeline_server.py:508] [CONF] mkldnn_cache_capacity not set, use default: 0
+INFO 2022-04-15 22:34:15,879 [operator.py:180] local_service_conf: {'model_config': './xlm_server', 'device_type': 0, 'client_type': 'local_predictor', 'workdir': '', 'thread_num': 2, 'devices': '', 'mem_optim': True, 'ir_optim': False, 'precision': 'fp32', 'use_calib': False, 'use_mkldnn': False, 'mkldnn_cache_capacity': 0}
+INFO 2022-04-15 22:34:15,880 [local_service_handler.py:160] Models(./xlm_server) will be launched by device cpu. use_gpu:False, use_trt:False, use_lite:False, use_xpu:False, device_type:0, devices:[-1], mem_optim:True, ir_optim:False, use_profile:False, thread_num:2, client_type:local_predictor, fetch_names:None, precision:fp32, use_mkldnn:False, mkldnn_cache_capacity:0, mkldnn_op_list:None, mkldnn_bf16_op_list:None
+INFO 2022-04-15 22:34:15,880 [operator.py:271] xlm 
+	input_ops: @DAGExecutor,
+	server_endpoints: None
+	fetch_list: None
+	client_config: ./xlm_server/serving_server_conf.prototxt
+	concurrency: 1,
+	timeout(s): -1,
+	retry: 1,
+	batch_size: 1,
+	auto_batching_timeout(s): None
+INFO 2022-04-15 22:34:15,880 [pipeline_server.py:215] ============= PIPELINE SERVER =============
+INFO 2022-04-15 22:34:15,880 [pipeline_server.py:216] 
+{
+    "worker_num":1,
+    "http_port":18080,
+    "rpc_port":9993,
+    "dag":{
+        "is_thread_op":false,
+        "retry":1,
+        "client_type":"brpc",
+        "use_profile":false,
+        "channel_size":0,
+        "tracer":{
+            "interval_s":-1
+        },
+        "channel_recv_frist_arrive":false
+    },
+    "op":{
+        "xlm":{
+            "concurrency":1,
+            "local_service_conf":{
+                "model_config":"./xlm_server",
+                "device_type":0,
+                "client_type":"local_predictor",
+                "workdir":"",
+                "thread_num":2,
+                "devices":"",
+                "mem_optim":true,
+                "ir_optim":false,
+                "precision":"fp32",
+                "use_calib":false,
+                "use_mkldnn":false,
+                "mkldnn_cache_capacity":0
+            },
+            "timeout":-1,
+            "retry":1,
+            "batch_size":1,
+            "auto_batching_timeout":-1
+        }
+    },
+    "build_dag_each_worker":false
+}
+INFO 2022-04-15 22:34:15,880 [pipeline_server.py:223] -------------------------------------------
+INFO 2022-04-15 22:34:15,881 [operator.py:307] Op(xlm) use local rpc service at port: []
+INFO 2022-04-15 22:34:15,888 [dag.py:496] [DAG] Succ init
+INFO 2022-04-15 22:34:15,888 [dag.py:659] ================= USED OP =================
+INFO 2022-04-15 22:34:15,889 [dag.py:662] xlm
+INFO 2022-04-15 22:34:15,889 [dag.py:663] -------------------------------------------
+INFO 2022-04-15 22:34:15,889 [dag.py:680] ================== DAG ====================
+INFO 2022-04-15 22:34:15,889 [dag.py:682] (VIEW 0)
+INFO 2022-04-15 22:34:15,889 [dag.py:684]   [@DAGExecutor]
+INFO 2022-04-15 22:34:15,889 [dag.py:686]     - xlm
+INFO 2022-04-15 22:34:15,890 [dag.py:682] (VIEW 1)
+INFO 2022-04-15 22:34:15,890 [dag.py:684]   [xlm]
+INFO 2022-04-15 22:34:15,890 [dag.py:687] -------------------------------------------
+INFO 2022-04-15 22:34:15,906 [dag.py:730] op:xlm add input channel.
+INFO 2022-04-15 22:34:15,920 [dag.py:759] last op:xlm add output channel
+INFO 2022-04-15 22:34:15,920 [dag.py:800] [DAG] Succ build DAG
+INFO 2022-04-15 22:34:15,925 [dag.py:832] [DAG] start
+INFO 2022-04-15 22:34:15,925 [dag.py:182] [DAG] set in channel succ, name [@DAGExecutor]
+INFO 2022-04-15 22:34:15,927 [pipeline_server.py:51] [PipelineServicer] succ init
+INFO 2022-04-15 22:34:15,935 [local_service_handler.py:160] Models(./xlm_server) will be launched by device cpu. use_gpu:False, use_trt:False, use_lite:False, use_xpu:False, device_type:0, devices:[-1], mem_optim:True, ir_optim:False, use_profile:False, thread_num:2, client_type:local_predictor, fetch_names:None, precision:fp32, use_mkldnn:False, mkldnn_cache_capacity:0, mkldnn_op_list:None, mkldnn_bf16_op_list:None
+INFO 2022-04-15 22:34:15,936 [operator.py:1305] Init cuda env in process 0
+INFO 2022-04-15 22:34:15,936 [local_service_handler.py:207] GET_CLIENT : concurrency_idx=0, device_num=1
+INFO 2022-04-15 22:34:15,943 [local_predict.py:136] pdmodel_file_list:['./xlm_server/inference.pdmodel'], pdiparams_file_list:['./xlm_server/inference.pdiparams']
+INFO 2022-04-15 22:34:15,943 [local_predict.py:144] LocalPredictor load_model_config params: model_path:./xlm_server, use_gpu:False, gpu_id:-1, use_profile:False, thread_num:2, mem_optim:True, ir_optim:False, use_trt:False, use_lite:False, use_xpu:False, precision:fp32, use_calib:False, use_mkldnn:False, mkldnn_cache_capacity:0, mkldnn_op_list:None, mkldnn_bf16_op_list:None, use_feed_fetch_ops:False, 
+INFO 2022-04-15 22:34:15,999 [pipeline_server.py:54] (log_id=10000) inference request name:xlm self.name:xlm time:1650033255.999537
+INFO 2022-04-15 22:34:16,000 [operator.py:1720] RequestOp unpack one request. log_id:10000, clientip:             name:xlm, method:prediction, time:1650033256.0003238
+INFO 2022-04-15 22:34:16,000 [dag.py:368] (data_id=0 log_id=10000) Succ Generate ID 
+INFO 2022-04-15 22:34:16,985 [operator.py:367] Op({}) has no fetch name set. So fetch all vars
+INFO 2022-04-15 22:34:17,110 [operator.py:1317] [xlm|0] Succ init
+INFO 2022-04-15 22:34:17,311 [dag.py:404] (data_id=0 log_id=10000) Succ predict
