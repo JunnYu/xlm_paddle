@@ -390,8 +390,7 @@ class XLMModel(XLMPretrainedModel):
                                                     hidden_size)
         if n_langs > 1 and use_lang_embeddings:
             self.lang_embeddings = nn.Embedding(n_langs, hidden_size)
-        self.embeddings = nn.Embedding(
-            vocab_size, hidden_size, padding_idx=pad_token_id)
+        self.embeddings = nn.Embedding(vocab_size, hidden_size)
         self.layer_norm_emb = nn.LayerNorm(hidden_size, epsilon=layer_norm_eps)
 
         self.attentions = nn.LayerList()

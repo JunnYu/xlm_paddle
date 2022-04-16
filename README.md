@@ -84,7 +84,7 @@ tar -zcvf xnli.tar.gz ./XNLI
 
 ### 3.1 准备环境
 
-- **硬件：**RTX3090 24G
+- **硬件：** RTX3090 24G
 - **框架：**
   - PaddlePaddle >= 2.2.0
 
@@ -109,6 +109,7 @@ tar -zcvf xnli.tar.gz ./XNLI
 ```bash
 cd xlm-mlm-tlm-xnli15-1024
 wget https://huggingface.co/xlm-mlm-tlm-xnli15-1024/resolve/main/pytorch_model.bin
+cd ../
 python convert.py
 ```
 **（2）或者直接下载huggingface的模型**
