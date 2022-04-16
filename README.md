@@ -90,7 +90,7 @@ tar -zcvf xnli.tar.gz ./XNLI
 
 **依赖：**
 
-- python -m pip install paddlepaddle-gpu==2.2.2.post112 -f https://www.paddlepaddle.org.cn/whl/windows/mkl/avx/stable.html
+- python -m pip install paddlepaddle-gpu==2.2.2.post112 -f https://www.paddlepaddle.org.cn/whl/linux/mkl/avx/stable.html
 - paddlenlp
 - reprod-log
 
