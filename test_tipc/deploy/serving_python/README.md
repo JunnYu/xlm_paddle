@@ -82,7 +82,7 @@ python pipeline_http_client.py
 如果访问成功，终端中的会输出如下内容。
 
 ```
-{'err_no': 0, 'err_msg': '', 'key': ['label_id', 'prob'], 'value': ['[0]', '[0.953127]'], 'tensors': []}
+{'err_no': 0, 'err_msg': '', 'key': ['label_id', 'prob'], 'value': ['[0]', '[0.54077893]'], 'tensors': []}
 ```
 
 ## 3. FAQ

@@ -38,7 +38,8 @@ def get_args(add_help=True):
 def main(args):
     paddle.set_device(args.device)
     # define model
-    model = XLMForSequenceClassification.from_pretrained(args.model_path)
+    model = XLMForSequenceClassification.from_pretrained(
+        args.model_path, num_classes=3, dropout=0.0)
     tokenizer = XLMTokenizer.from_pretrained(args.model_path)
     tokenizer.current_lang = args.language
     model.eval()

@@ -48,7 +48,8 @@ def get_args(add_help=True):
 
 def export(args):
     # build model
-    model = XLMForSequenceClassification.from_pretrained(args.model_path)
+    model = XLMForSequenceClassification.from_pretrained(
+        args.model_path, num_classes=3, dropout=0.0)
     tokenizer = XLMTokenizer.from_pretrained(args.model_path)
     model.eval()
     import paddle

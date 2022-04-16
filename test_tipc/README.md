@@ -421,7 +421,7 @@ python tools/predict.py --model_path=./xnli_outputs/ckpt
 
 `You don't have to stay there.<sep>You can leave.` 其中 <sep>是为了便于切分文本
 
-最终输出结果为`label_id: 0, prob: 0.9959235191345215`，表示预测的标签ID是`0`，置信度为`0.9959`。
+最终输出结果为`label_id: 0, prob: 0.5407765507698059`，表示预测的标签ID是`0`，置信度为`0.5407765507698059`。
 
 * 使用CPU预测
 
@@ -432,7 +432,7 @@ python tools/predict.py --model_path=./xnli_outputs/ckpt --device=cpu
 
 `You don't have to stay there.<sep>You can leave.` 其中 <sep>是为了便于切分文本
 
-最终输出结果为`label_id: 0, prob: 0.995919406414032`，表示预测的标签ID是`0`，置信度为`0.9959`。
+最终输出结果为`label_id: 0, prob: 0.5407765507698059`，表示预测的标签ID是`0`，置信度为`0.5407765507698059`。
 
 ## 5. 模型推理部署
 

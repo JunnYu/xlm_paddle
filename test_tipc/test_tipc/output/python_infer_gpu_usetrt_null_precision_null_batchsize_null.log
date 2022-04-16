@@ -5,5 +5,4 @@ Deprecated in NumPy 1.20; for more details and guidance: https://numpy.org/devdo
   from numpy import (exp, inf, pi, sqrt, floor, sin, cos, around, int,
 /home/yj/anaconda3/envs/yj/lib/python3.8/site-packages/scipy/sparse/sputils.py:17: DeprecationWarning: `np.typeDict` is a deprecated alias for `np.sctypeDict`.
   supported_dtypes = [np.typeDict[x] for x in supported_dtypes]
-text: You don't have to stay there.<sep>You can leave., label_id: 2, prob: 0.9952486753463745
-2 0.9952487
+text: You don't have to stay there.<sep>You can leave., label_id: 0, prob: 0.5407765507698059

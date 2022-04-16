@@ -119,7 +119,7 @@ python convert.py
 
 ```python
 from xlm_paddle import XLMForSequenceClassification, XLMTokenizer
-model = XLMForSequenceClassification.from_pretrained("xlm-mlm-tlm-xnli15-1024-fintuned-on-xnli")
+model = XLMForSequenceClassification.from_pretrained("xlm-mlm-tlm-xnli15-1024-fintuned-on-xnli", num_classes=3, dropout=0.0)
 tokenizer = XLMTokenizer.from_pretrained("xlm-mlm-tlm-xnli15-1024-fintuned-on-xnli")
 # 注意名字中不需要带paddle。调用后会自动从huggingface.co下载权重。
 ```

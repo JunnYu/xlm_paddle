@@ -637,8 +637,8 @@ class XLMForSequenceClassification(XLMPretrainedModel):
     def forward(
             self,
             input_ids=None,
-            attention_mask=None,
             langs=None,
+            attention_mask=None,
             position_ids=None,
             lengths=None,
             output_attentions=False,

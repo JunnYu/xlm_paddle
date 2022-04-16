@@ -58,10 +58,10 @@ python deploy/inference_python/infer.py --model_dir=./xlm_infer/
 在终端中输出结果如下。
 
 ```
-text: You don't have to stay there.<sep>You can leave., label_id: 0, prob: 0.9517736434936523
+text: You don't have to stay there.<sep>You can leave., label_id: 0, prob: 0.5407765507698059
 ```
 
-表示预测的类别ID是`0`，置信度为`0.9517736434936523`，该结果与基于训练引擎的结果完全一致。
+表示预测的类别ID是`0`，置信度为`0.5407765507698059`，该结果与基于训练引擎的结果完全一致。
 
 
 ## 3. FAQ

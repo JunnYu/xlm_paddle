@@ -8,7 +8,7 @@ from train import evaluate
 
 def main(args):
     model = XLMForSequenceClassification.from_pretrained(
-        args.pretrained_model_name_or_path)
+        args.pretrained_model_name_or_path, num_classes=3, dropout=0.0)
     metric = Accuracy()
     model.eval()
     params = Namespace(
